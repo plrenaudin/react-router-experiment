@@ -33,13 +33,25 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body>
-        <nav>
-          <ul>
-            <li>
-              <a href="/">Home</a>
-              <a href="/about">About</a>
-            </li>
-          </ul>
+        <nav className="bg-white dark:bg-gray-800 shadow-lg">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex justify-between items-center h-16">
+              <div className="hidden md:flex space-x-8">
+                <a
+                  href="/"
+                  className="text-gray-700 dark:text-white hover:text-blue-600 px-3 py-2 text-sm font-medium transition duration-150"
+                >
+                  Home
+                </a>
+                <a
+                  href="/about"
+                  className="text-gray-700 dark:text-white hover:text-blue-600 px-3 py-2 text-sm font-medium transition duration-150"
+                >
+                  About
+                </a>
+              </div>
+            </div>
+          </div>
         </nav>
         {children}
         <ScrollRestoration />
