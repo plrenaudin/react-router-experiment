@@ -1,5 +1,6 @@
 import {
   isRouteErrorResponse,
+  Link,
   Links,
   Meta,
   Outlet,
@@ -44,18 +45,18 @@ export function Layout({ children }: { children: React.ReactNode }) {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex justify-between items-center h-16">
               <div className="hidden md:flex space-x-8">
-                <a
-                  href="/"
+                <Link
+                  to="/"
                   className="text-gray-700 dark:text-white hover:text-blue-600 px-3 py-2 text-sm font-medium transition duration-150"
                 >
                   Home
-                </a>
-                <a
-                  href="/about"
+                </Link>
+                <Link
+                  to="/about"
                   className="text-gray-700 dark:text-white hover:text-blue-600 px-3 py-2 text-sm font-medium transition duration-150"
                 >
                   About
-                </a>
+                </Link>
               </div>
             </div>
           </div>
