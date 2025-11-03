@@ -18,13 +18,11 @@ export async function loader({ request }: Route.LoaderArgs) {
   const contacts = searchTerm
     ? await searchContacts(searchTerm)
     : await getContacts();
-  console.log("loader", contacts);
   return { contacts };
 }
 
 export async function action({ request }: Route.ActionArgs) {
   let formData = await request.formData();
-  console.log("formData", formData);
   let intent = formData.get("intent");
   if (intent === "delete") {
     await deleteContact(Number(formData.get("id")));
